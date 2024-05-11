@@ -6,34 +6,34 @@ PC
 Anaconda - Python 3.7
 ## ALGORITHM: 
 ### Step 1:
-Get the file name from the user.
+Import sys module to use command line arguments.`
 ### Step 2:
-Assign num_words equal to 0.
+Create a file pointer and open the file which is passed in command line.
 ### Step 3:
-open the file by with open(fname,"r") as f: for handling.
+Initialize word count as zero.
 ### Step 4:
-Iterate through each line in the file and separate them into words using space('')
+For each line in file, split it into words and find number of the words in every line.
 ### Step 5:
-Find the number of words using num_words+=len(words)
+Sum the number of words in each line.
 ### Step 6:
-End the program by orinting the output
+Display the total words in the file.
 
 ## PROGRAM:
 ```
-#DEVELOPED BY: ROSHINI S
-#REGISTER NUMBER : 212223240142
-
-fname=input("Enter the file name: ")
-num_words=0
-with open(fname,"r") as f:
-  for line in f:
-    words=line.split()
-    num_words+=len(words)
-print("Number of words: ",num_words)
+Developed by: ROSHINI S
+Register no: 212223240142
+import sys
+fp=open(sys.argv[1])
+wordcount=0
+for i in fp:
+    words=i.split()
+    wordcount+=len(words)
+print("Total no of words in file is",wordcount)
+fp.close()
 ```
 ## OUTPUT:
 
-![Screenshot 2024-05-10 191707](https://github.com/Roshini2201/Command--line-arguments-to-count-word/assets/154105318/5802be8b-46ac-42c9-99bb-4a2ff15659ee)
+![329759082-3443108d-de5f-4304-92e0-c55a6410ff53](https://github.com/Roshini2201/Command--line-arguments-to-count-word/assets/154105318/afa8f132-7a24-4ee1-a4c9-fd4d7dda24fb)
 
 
 ## RESULT:
